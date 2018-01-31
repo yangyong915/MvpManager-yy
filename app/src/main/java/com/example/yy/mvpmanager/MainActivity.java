@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity implements MvpContract.View 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter = new MvpPresenter(this);
-        presenter.start();
+        new MvpPresenter(this);
     }
 
     @Override
@@ -28,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements MvpContract.View 
 
     @Override
     public void setPresenter(MvpContract.Presenter presenter) {
-
+        if (presenter == null) {
+            this.presenter = presenter;
+        }
     }
 }

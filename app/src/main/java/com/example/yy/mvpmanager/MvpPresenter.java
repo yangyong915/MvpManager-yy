@@ -19,6 +19,7 @@ public class MvpPresenter implements MvpContract.Presenter {
         mView = checkNotNull(mvpView);
         mvpModel = new MvpModel();
         mView.setPresenter(this);
+        start();
     }
 
     @Override
