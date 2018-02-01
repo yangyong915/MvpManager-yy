@@ -1,8 +1,13 @@
 package com.example.yy.mvpmanager;
 
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjector;
 
 /**
  * crate by yy on 2018-1-17
@@ -10,14 +15,15 @@ import android.widget.Toast;
  */
 public class MainActivity extends AppCompatActivity implements MvpContract.View {
 
-    MvpContract.Presenter presenter;
+    @Inject
+    TestPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DaggerMainActivityComponent.create().inject(this);
         setContentView(R.layout.activity_main);
-
-        new MvpPresenter(this);
+        presenter.toString();
     }
 
     @Override
@@ -26,9 +32,7 @@ public class MainActivity extends AppCompatActivity implements MvpContract.View 
     }
 
     @Override
-    public void setPresenter(MvpContract.Presenter presenter) {
-        if (presenter == null) {
-            this.presenter = presenter;
-        }
+    public void showload() {
+
     }
 }

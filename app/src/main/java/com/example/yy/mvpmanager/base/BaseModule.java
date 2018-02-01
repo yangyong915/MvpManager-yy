@@ -16,7 +16,7 @@
 
 package com.example.yy.mvpmanager.base;
 
-public interface BasePresenter {
+public interface BaseModule {
 
     void start();
 

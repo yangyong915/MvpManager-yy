@@ -1,7 +1,7 @@
 package com.example.yy.mvpmanager;
 
 
-import com.example.yy.mvpmanager.base.BasePresenter;
+import com.example.yy.mvpmanager.base.BaseModule;
 import com.example.yy.mvpmanager.base.BaseView;
 
 /**
@@ -11,11 +11,11 @@ import com.example.yy.mvpmanager.base.BaseView;
 
 public interface MvpContract {
 
-    interface View extends BaseView<Presenter> {
+    interface View extends BaseView {
         void showData(String data);
     }
 
-    interface Presenter extends BasePresenter {
+    interface Model extends BaseModule {
         void getData();
     }
 }
