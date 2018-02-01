@@ -1,4 +1,4 @@
-gen分析g# MvpManager-yy
+MvpManager-yy
 mvp架构之路
 maste分支:最简单版本
 mvpdagger2分支：无module模式得dagger2注解分析
