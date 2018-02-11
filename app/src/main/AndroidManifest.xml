@@ -13,9 +13,32 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name="com.example.yy.mvpmanager.ActivityAlias1"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="正常的icon"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name="com.example.yy.mvpmanager.ActivityAlias2"
+            android:enabled="false"
+            android:icon="@mipmap/gift"
+            android:label="双11啦！"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
     </application>
 
 </manifest>
