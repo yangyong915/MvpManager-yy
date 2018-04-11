@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/arouter-api/arouter-api.iml" filepath="$PROJECT_DIR$/arouter-api/arouter-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/arouter-compiler/arouter-compiler.iml" filepath="$PROJECT_DIR$/arouter-compiler/arouter-compiler.iml" />
       <module fileurl="file://$PROJECT_DIR$/arouter-register/arouter-register.iml" filepath="$PROJECT_DIR$/arouter-register/arouter-register.iml" />
-      <module fileurl="file://$PROJECT_DIR$/build-gradle/build-gradle.iml" filepath="$PROJECT_DIR$/build-gradle/build-gradle.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1module/test1module.iml" filepath="$PROJECT_DIR$/test1module/test1module.iml" />
       <module fileurl="file://$PROJECT_DIR$/test2module/test2module.iml" filepath="$PROJECT_DIR$/test2module/test2module.iml" />
     </modules>
