@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yy.test2module">
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".Test2Activity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,50 @@
+if (!isNeedTest2Module.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        if (!isNeedTest2Module.toBoolean()) {
+            applicationId "com.example.yy.test2module"
+        }
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    sourceSets {
+        main {
+            if (!isNeedTest2Module.toBoolean()) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        lintOptions { abortOnError false }
+    }
+
+}
+
+dependencies {
+    compile project(':arouter-api')
+    compile "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+    annotationProcessor project(':arouter-compiler')
+    testImplementation 'junit:junit:4.12'
+}

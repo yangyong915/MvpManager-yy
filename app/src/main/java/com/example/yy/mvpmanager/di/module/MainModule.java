@@ -29,7 +29,7 @@ public class MainModule {
         return this.view;
     }
 
-    @Singleton
+    @ActivityScope
     @Provides
     MainContract.Model provideMainModel(MainModel model) {
         return model;

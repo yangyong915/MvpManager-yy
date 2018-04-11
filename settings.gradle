@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':test1module', ':test2module', ':arouter-annotation', ':arouter-compiler', ':arouter-api', ':arouter-register', ':build-gradle'
